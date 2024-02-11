@@ -11,6 +11,7 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
   for file in file*5; do
     echo "Running $file at iit11"
     su iit11 -c "bash $file &" 2>/dev/null
+    echo "PID: $!"
     pid=$!
     for user in iit11 iit12 iit21 iit22 iit3 root; do
       echo "User $user:"
