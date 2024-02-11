@@ -11,7 +11,7 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
     echo "User $user:"
 
     # Read
-    su $user -c "ls" 
+    su $user -c "ls" 2>/dev/null
     if [ $? -eq 0 ]; then
       echo "Can read $dir"
     else
@@ -19,7 +19,7 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
     fi
 
     # Write
-    su $user -c "touch test" 
+    su $user -c "touch test" 2>/dev/null
     if [ $? -eq 0 ]; then
       echo "Can create new file in $dir"
       rm test
@@ -28,7 +28,7 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
     fi
 
     # Delete
-    su $user -c "rm file11" 
+    su $user -c "rm file11" 2>/dev/null
     if [ $? -eq 0 ]; then
       echo "Can delete file in $dir"
     else
