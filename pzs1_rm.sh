@@ -6,11 +6,11 @@
 # группы groupt_iit1, group_iit2
 rm -r pzs
 
-userdel -r iit11
-userdel -r iit12
-userdel -r iit21
-userdel -r iit22
-userdel -r iit3
+userdel iit11
+userdel iit12
+userdel iit21
+userdel iit22
+userdel iit3
 
 groupdel group_iit1
 groupdel group_iit2
