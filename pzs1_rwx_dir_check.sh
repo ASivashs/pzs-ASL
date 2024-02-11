@@ -9,30 +9,29 @@ for dir in pzs11 pzs12 pzs13 pzs14 pzs15; do
   for user in iit11 iit12 iit21 iit22 iit3 root; do
     echo "User $user:"
 
-    # Проверить, можно ли прочитать содержимое папки
-    su $user -c "ls" 2>/dev/null
+    # Read
+    su $user -c "ls" 
     if [ $? -eq 0 ]; then
       echo "Can read $dir"
     else
       echo "Cannot read $dir"
     fi
 
-    # Проверить, можно ли создать новый файл в папке
-    su $user -c "touch test" 2>/dev/null
+    # Write
+    su $user -c "touch test" 
     if [ $? -eq 0 ]; then
       echo "Can create new file in $dir"
-      # Удалить созданный файл
       rm test
     else
       echo "Cannot create new file in $dir"
     fi
 
-    # Проверить, можно ли удалить каждый из существующих файлов
-    su $user -c "rm file11" 2>/dev/null
+    # Delete
+    su $user -c "rm file11" 
     if [ $? -eq 0 ]; then
-    echo "Can delete file"
+      echo "Can delete file in $dir"
     else
-    echo "Cannot delete file"
+      echo "Cannot delete file in $dir"
     fi
 
     echo "-----------------"
