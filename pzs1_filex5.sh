@@ -10,6 +10,7 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
   cd $dir
   for file in file*5; do
     echo "Running $file at iit11"
+    pwd
     chmod +x $dir/$file
     su iit11 -c "./$dir/$file &" 2>/dev/null
     echo "PID: $? and $!"
