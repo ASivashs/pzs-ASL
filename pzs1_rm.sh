@@ -4,7 +4,7 @@
 # 17
 # Удалить созданные файлы, папки, пользователей iit11, iit12, iit21, iit22, iit3,
 # группы groupt_iit1, group_iit2
-rm -r pzs
+rm -rf pzs
 
 userdel iit11
 userdel iit12

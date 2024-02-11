@@ -5,6 +5,7 @@
 # Для каждого из созданных файлов проверить, можно ли прочитать,
 # редактировать, запустить файл пользователям:
 # iit11, iit12, iit21, iit22, iit3, root.
+cd pzs
 for dir in pzs11 pzs12 pzs13 pzs14; do
   cd $dir
   for file in file*; do

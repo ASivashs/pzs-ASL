@@ -4,7 +4,7 @@
 # 16
 # В каждой из созданных папок проверить, можно ли прочитать содержимое
 # папок, создать новые файлы, удалить каждый из существующих файлов
-cd "pzs"
+cd pzs
 for dir in pzs11 pzs12 pzs13 pzs14; do
   cd $dir
   for user in iit11 iit12 iit21 iit22 iit3 root; do
@@ -37,5 +37,6 @@ for dir in pzs11 pzs12 pzs13 pzs14; do
 
     echo "-----------------"
   done
+  cd ..
   echo "+++++++++++++++++"
 done
