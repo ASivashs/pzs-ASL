@@ -36,5 +36,4 @@ for dir in pzs11 pzs12 pzs13 pzs14 pzs15; do
 
     echo "-----------------"
   done
-  cd ..
 done
